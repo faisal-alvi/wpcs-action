@@ -13,4 +13,6 @@ jobs:
         - name: WPCS Check
           uses: 10up/wpcs-action@phpcs-only-changed-files
           with:
+            enable_warnings: true
+            standard: 10up-Default
             only_changed_lines: true

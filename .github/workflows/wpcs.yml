@@ -1,0 +1,16 @@
+name: WPCS Check
+
+on: pull_request
+
+jobs:
+  phpcs:
+      name: WPCS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - name: WPCS Check
+          uses: 10up/wpcs-action@phpcs-only-changed-files
+          with:
+            only_changed_lines: true

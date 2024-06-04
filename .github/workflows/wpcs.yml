@@ -13,6 +13,5 @@ jobs:
         - name: WPCS Check
           uses: 10up/wpcs-action@fix/wordpress-standard
           with:
-            enable_warnings: true
-            standard: 10up-Default
+            standard: WordPress
             only_changed_lines: true
